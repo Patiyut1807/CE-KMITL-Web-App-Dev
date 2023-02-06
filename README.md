@@ -9,5 +9,5 @@ This repo is for subject Web-app-dev
   
   > adding your page to read me with *http://htmlpreview.github.io/*<br>
   or
-  > pass the parameter of your html path on github to link above
+  > pass the parameter of your html path on github to link above<br>
   > ```https://htmlpreview.github.io/?[your html path]```
