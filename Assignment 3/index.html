@@ -9,14 +9,17 @@
       crossorigin="anonymous"
     />
     <style>
-      img{
+      img {
         width: 50vw;
+        max-height: 360px;
       }
-      body{
+      body {
         width: 100%;
       }
+      #row1 {
+        background-color: brown;
+      }
       @media (max-width: 768px) {
-        
       }
     </style>
   </head>
@@ -53,11 +56,26 @@
         </ul>
       </div>
     </nav>
-    <div class="container d-flex flex-column justify-content-center">
-      <div>
-        <div id="quote-card"></div>
-        <img src="https://rare-gallery.com/mocahbig/392052-yoimiya-genshin-impact-game-4k-pc-wallpaper.jpg">
-        <div id="detail-card"></div>
+    <div class="d-flex flex-column justify-content-center">
+      <div
+        id="row1"
+        class="d-flex flex-md-row flex-column justify-content-md-center justify-content-center p-3"
+      >
+        <img
+          class="rounded-circle border border-white min"
+          src="https://rare-gallery.com/mocahbig/392052-yoimiya-genshin-impact-game-4k-pc-wallpaper.jpg"
+        />
+        <div id="detail-card" class="w-auto p-4 ml-2">
+          <div class="rounded bg-light w-auto h-100 p-5">
+            <h2 class="border-bottom border-danger">Yoimiya</h2>
+            Naganohara Yoimiya (ภาษาญี่ปุ่น: 長なが野の原はら宵よい宮みや
+            Naganohara Yoimiya) เป็นตัวละครธาตุไฟที่เล่นได้ในเกม Genshin Impact
+            เด็กสาวร่าเริงพลังงานสูงผู้ชื่นชอบแสงสีวิจิตรตระการตาของดอกไม้ไฟยิ่งกว่าสิ่งใด
+            Yoimiya ทำกิจการร้านดอกไม้ไฟนากาโนะฮาระร่วมกับผู้เป็นพ่อ Naganohara
+            Ryuunosuke และเป็นที่รักของชาว Inazuma ทั่วบ้านทั่วเมืองในฐานะ
+            "องค์หญิงแห่งเทศกาลฤดูร้อน"
+          </div>
+        </div>
       </div>
     </div>
   </body>
