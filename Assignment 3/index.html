@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yoi Main</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
@@ -9,46 +11,63 @@
       crossorigin="anonymous"
     />
     <style>
-      img {
-        width: 50vw;
-        max-height: 360px;
+      * {
+        box-sizing: border-box;
       }
       body {
-        width: 100%;
+        width: 100vw;
+        height: 100vh;
       }
-      #row1 {
-        background-color: brown;
-      }
-      @media (max-width: 768px) {
+      #img-profile {
+        max-width: 624px;
+        padding: 5px;
+        border: 3px solid;
       }
     </style>
   </head>
-  <body class="">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Yoi Main</a>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
+      <a class="navbar-brand" href="#">Navbar</a>
       <button
         class="navbar-toggler"
         type="button"
         data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#"
-              >Overview <span class="sr-only">(current)</span></a
+              >Home <span class="sr-only">(current)</span></a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Link</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="#">Disabled</a>
@@ -56,26 +75,52 @@
         </ul>
       </div>
     </nav>
-    <div class="d-flex flex-column justify-content-center">
-      <div
-        id="row1"
-        class="d-flex flex-md-row flex-column justify-content-md-center justify-content-center p-3"
-      >
+    <div class="container w-100 h-100">
+      <div class="row m-2 border p-4 rounded shadow">
         <img
-          class="rounded-circle border border-white min"
+          id="img-profile"
+          class="col rounded-circle"
           src="https://rare-gallery.com/mocahbig/392052-yoimiya-genshin-impact-game-4k-pc-wallpaper.jpg"
         />
-        <div id="detail-card" class="w-auto p-4 ml-2">
-          <div class="rounded bg-light w-auto h-100 p-5">
-            <h2 class="border-bottom border-danger">Yoimiya</h2>
-            Naganohara Yoimiya (ภาษาญี่ปุ่น: 長なが野の原はら宵よい宮みや
-            Naganohara Yoimiya) เป็นตัวละครธาตุไฟที่เล่นได้ในเกม Genshin Impact
-            เด็กสาวร่าเริงพลังงานสูงผู้ชื่นชอบแสงสีวิจิตรตระการตาของดอกไม้ไฟยิ่งกว่าสิ่งใด
-            Yoimiya ทำกิจการร้านดอกไม้ไฟนากาโนะฮาระร่วมกับผู้เป็นพ่อ Naganohara
-            Ryuunosuke และเป็นที่รักของชาว Inazuma ทั่วบ้านทั่วเมืองในฐานะ
-            "องค์หญิงแห่งเทศกาลฤดูร้อน"
-          </div>
+        <div
+          id="character-detail"
+          class="col mt-3 mb-auto mt-lg-auto ml-lg-3 p-3 rounded shadow"
+        >
+          <h2 class="border-bottom border-dark">Yoimiya</h2>
+          Naganohara Yoimiya (ภาษาญี่ปุ่น: 長なが野の原はら宵よい宮みや
+          Naganohara Yoimiya) เป็นตัวละครธาตุไฟที่เล่นได้ในเกม Genshin Impact
+          เด็กสาวร่าเริงพลังงานสูงผู้ชื่นชอบแสงสีวิจิตรตระการตาของดอกไม้ไฟยิ่งกว่าสิ่งใด
+          Yoimiya ทำกิจการร้านดอกไม้ไฟนากาโนะฮาระร่วมกับผู้เป็นพ่อ Naganohara
+          Ryuunosuke และเป็นที่รักของชาว Inazuma ทั่วบ้านทั่วเมืองในฐานะ
+          "องค์หญิงแห่งเทศกาลฤดูร้อน"
         </div>
+      </div>
+      <div class="row bg-danger h-50 m-2 border p-4 rounded shadow">
+        <div class="col row bg-light">
+          <div class="col">
+            <img
+              src="https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210809/2021080910112940475.jpg"
+              width="200px"
+            />
+          </div>
+          <div class="col">
+            <div class="container">
+              <div class="row">1</div>
+              <div class="row">1</div>
+              <div class="row">1</div>
+              <div class="row">1</div>
+              <div class="row">1</div>
+              <div class="row">1</div>
+              <div class="row">1</div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="col"> hhhh</div>
+      </div>
+      
+      <div class="row bg-dark h-50 m-2 border p-4 rounded shadow">
+        hhhhhhhhhhh
       </div>
     </div>
   </body>
