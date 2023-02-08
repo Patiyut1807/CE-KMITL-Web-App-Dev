@@ -30,10 +30,11 @@
         width: 50px;
       }
     </style>
+    <link rel="icon" href="https://static.wikia.nocookie.net/gensin-impact/images/1/11/Icon_Emoji_Paimon%27s_Paintings_16_Yoimiya_1.png/revision/latest?cb=20220812043355">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
-      <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger w-100  z-3 ">
+      <a class="navbar-brand" href="#">Yoi Main</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -49,42 +50,36 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
+            <a class="nav-link" href="#Profile"
+              >Profile <span class="sr-only">(current)</span></a
             >
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="#Info">Info</a>
           </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+          <li class="nav-item active">
+            <a class="nav-link" href="#Other-name">Other name</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="#Skill">Skill</a>
           </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#Constelation">Constelation</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#Ascensions-and-Stats">Ascensions and Stats</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#Talent-Upgrade">Talent Upgrade</a>
+          </li>
+          
         </ul>
       </div>
     </nav>
-    <div class="container w-100 h-100">
+    <div class="container w-100 h-100 mt-5">
       <div class="row m-2 border p-4 rounded shadow">
         <div class="row w-100 m-2">
-          <h1 class="col font-weight-bold text-center">Profile</h1>
+          <h1 id="Profile" class="col font-weight-bold text-center">Profile</h1>
         </div>
         <div class="row m-1 p-2">
           <img
@@ -107,17 +102,18 @@
         </div>
       </div>
       <div class="row bg-danger h-auto m-2 border p-3 rounded shadow">
-        <div class="col bg-light m-2 w-100">
-          <h2 class="row col m-auto text-center">ประวัติ</h2>
-          <div class="row m-auto">
+        <div class="col bg-light rounded m-2 w-100 text-center">
+          <h2 id="Info" class="col m-auto">ประวัติ</h2>
+          <div class="row m-auto text-center">
             <img
+              class="rounded m-auto"
               src="https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210809/2021080910112940475.jpg"
               width="200px"
             />
           </div>
           <div class="row m-auto">
             <div class="container">
-              <div class="row">
+              <div class="row mb-3">
                 <div class="col text-center">
                   <p class="col text-center">ดาว</p>
                   <img
@@ -169,37 +165,48 @@
             </div>
           </div>
         </div>
-        <div class="col m-2">
-          ชื่อในภาษาอื่น
-          <div class="row">ไทย Yoimiya</div>
-          <div class="row">อังกฤษ Yoimiya</div>
-          <div class="row">จีน (ตัวย่อ) 宵宫 Xiāogōng</div>
-          <div class="row">จีน (ตัวเต็ม) 宵宮 Xiāogōng</div>
-          <div class="row">ญี่ปุ่น 宵よい宮みや Yoimiya</div>
-          <div class="row">เกาหลี 요이미야 Yoimiya</div>
-          <div class="row">รัสเซีย Ёимия</div>
-          <div class="row"></div>
-          <div class="row"></div>
-          <div class="row"></div>
+        <div class="col bg-light rounded m-2 w-100 text-center">
+          <h2 id="Other-name" class="col m-auto text-center">ชื่อในภาษาอื่น</h2>
+          <div class="row p-1 border ml-1 mr-1 mt-3">ไทย Yoimiya</div>
+          <div class="row p-1 border ml-1 mr-1">อังกฤษ Yoimiya</div>
+          <div class="row p-1 border ml-1 mr-1">จีน (ตัวย่อ) 宵宫 Xiāogōng</div>
+          <div class="row p-1 border ml-1 mr-1">
+            จีน (ตัวเต็ม) 宵宮 Xiāogōng
+          </div>
+          <div class="row p-1 border ml-1 mr-1">
+            ญี่ปุ่น 宵よい宮みや Yoimiya
+          </div>
+          <div class="row p-1 border ml-1 mr-1">เกาหลี 요이미야 Yoimiya</div>
+          <div class="row p-1 border ml-1 mr-1">รัสเซีย Ёимия</div>
         </div>
       </div>
 
       <div class="row bg-dark m-2 border p-4 rounded shadow">
-        <div class="container ">
-          <div class="row p-3 bg-light">
-            <h2 class="row">Skill</h2>
-            <div class="row bg-danger p-4">
+        <div class="container">
+          <div class="row p-3 bg-light rounded border border-dark m-1">
+            <h2 id="Skill" class="row w-100 ml-2">Skill</h2>
+            <div
+              class="row bg-danger p-4 w-100 rounded border-dark border m-2 rounded border-dark border"
+            >
               <div class="row">
                 <div class="col">
                   <img
-                      class="rounded-circle"
+                    class="rounded-circle"
                     src="https://github.com/Patiyut1807/CE-KMITL-Web-App-Dev/blob/main/Img/Talent_Firework_Flare-Up.jpg?raw=true"
                   />
                 </div>
-                <div class="col-25 ml-4">Firework Flare-Up</div>
-                <div class="col-25 ml-4">โจมตีปกติ</div>
+                <div
+                  class="col-25 ml-4 border-dark border p-2 font-weight-bold"
+                >
+                  Firework Flare-Up
+                </div>
+                <div
+                  class="col-25 ml-4 border-dark border p-2 font-weight-bold"
+                >
+                  โจมตีปกติ
+                </div>
               </div>
-              <div class="row">
+              <div class="row p-3 mt-2">
                 โจมตีปกติ ยิงธนูโจมตีอย่างต่อเนื่องมากสุดห้าครั้ง ชาร์จโจมตี
                 การเล็งโจมตีสร้างความเสียหายเพิ่มขึ้นและแม่นยำยิ่งขั้น
                 เมื่อเล็งโจมตี จะทำการรวบรวมเปลวไฟไว้บนหัวลูกศรอย่างต่อเนื่อง
@@ -216,18 +223,26 @@
                 โดยจะสร้างความเสียหายวงกว้างเมื่อลงถึงพื้น
               </div>
             </div>
-            <div class="row bg-danger p-4">
+            <div class="row bg-danger p-4 w-100 rounded border-dark border m-2">
               <div class="row">
                 <div class="col">
                   <img
-                  class="rounded-circle"
+                    class="rounded-circle"
                     src="https://github.com/Patiyut1807/CE-KMITL-Web-App-Dev/blob/main/Img/Talent_Niwabi_Fire-Dance.jpg?raw=true"
                   />
                 </div>
-                <div class="col-25 ml-4">Ryuukin Saxifrage</div>
-                <div class="col-25 ml-4">สกิลธาตุ</div>
+                <div
+                  class="col-25 ml-4 border-dark border p-2 font-weight-bold"
+                >
+                  Ryuukin Saxifrage
+                </div>
+                <div
+                  class="col-25 ml-4 border-dark border p-2 font-weight-bold"
+                >
+                  สกิลธาตุ
+                </div>
               </div>
-              <div class="row">
+              <div class="row p-3 mt-2">
                 ระบำดอกไม้ไฟทำให้ดินประสิวที่ใช้สำหรับทำดอกไม้ไฟล้อมรอบ Yoimiya
                 Niwabi Enshou
                 ภายในช่วงเวลาต่อเนื่องจะเปลี่ยนลูกธนูจากการโจมตีปกติของ Yoimiya
@@ -239,18 +254,26 @@
                 ออกจากการต่อสู้
               </div>
             </div>
-            <div class="row bg-danger p-4">
+            <div class="row bg-danger p-4 w-100 rounded border-dark border m-2">
               <div class="row">
                 <div class="col">
                   <img
-                  class="rounded-circle"
+                    class="rounded-circle"
                     src="https://github.com/Patiyut1807/CE-KMITL-Web-App-Dev/blob/main/Img/Talent_Ryuukin_Saxifrage.jpg?raw=true"
                   />
                 </div>
-                <div class="col-25 ml-4">Ryuukin Saxifrage</div>
-                <div class="col-25 ml-4">ท่าไม้ตาย</div>
+                <div
+                  class="col-25 ml-4 border-dark border p-2 font-weight-bold"
+                >
+                  Ryuukin Saxifrage
+                </div>
+                <div
+                  class="col-25 ml-4 border-dark border p-2 font-weight-bold"
+                >
+                  ท่าไม้ตาย
+                </div>
               </div>
-              <div class="row">
+              <div class="row w-100 p-3 mt-2">
                 Yoimiya กระโจนขึ่้นสู่ท้องฟ้าตามดอกไม้ไฟ "Ryuukin Saxifrage"
                 ที่ตนสร้างขึ้นจากนั้นยิงธนูไฟที่อัดแน่นไปด้วยเซอร์ไพรส์ออกไปข้างหน้า
                 สร้างความเสียหายไฟวงกว้าง และติด "Aurous Blaze"
@@ -268,105 +291,178 @@
               </div>
             </div>
           </div>
-          <div class="row p-3 bg-light">
-            <h2 class="row">Constelation</h2>
-            <div class="row bg-danger p-4">
+          <div class="row p-3 bg-light rounded border border-dark m-1">
+            <h2 id="Constelation" class="row w-100 ml-2">Constelation</h2>
+            <div class="row bg-danger p-4 w-100 rounded border-dark border m-2">
               <div class="row">
                 <div class="col">
                   <img
-                      class="rounded-circle"
+                    class="rounded-circle"
                     src="https://github.com/Patiyut1807/CE-KMITL-Web-App-Dev/blob/main/Img/Talent_Firework_Flare-Up.jpg?raw=true"
                   />
                 </div>
-                <div class="col-25 ml-4">Agate Ryuukin</div>
-                <div class="col-25 ml-4">1</div>
+                <div
+                  class="col-25 ml-4 border-dark border p-2 font-weight-bold"
+                >
+                  Agate Ryuukin
+                </div>
+                <div
+                  class="col-25 ml-4 border-dark border p-2 font-weight-bold"
+                >
+                  1
+                </div>
               </div>
-              <div class="row">
-                ช่วงเวลาต่อเนื่องของ Aurous Blaze ที่สร้างขึ้นโดย Ryuukin Saxifrage นานขึ้น 4 วินาที
-นอกจากนี้ เมื่อศัตรูที่อยู่ภายใต้ผลกระทบของ Aurous Blaze ที่สร้างขึ้นโดยตัวของ Yoimiya เองถูกจัดการภายในช่วงเวลาต่อเนื่อง พลังโจมตีของ Yoimiya จะเพิ่มขึ้น 20% เป็นเวลา 20 วินาที
+              <div class="row p-3 mt-2">
+                ช่วงเวลาต่อเนื่องของ Aurous Blaze ที่สร้างขึ้นโดย Ryuukin
+                Saxifrage นานขึ้น 4 วินาที นอกจากนี้
+                เมื่อศัตรูที่อยู่ภายใต้ผลกระทบของ Aurous Blaze
+                ที่สร้างขึ้นโดยตัวของ Yoimiya เองถูกจัดการภายในช่วงเวลาต่อเนื่อง
+                พลังโจมตีของ Yoimiya จะเพิ่มขึ้น 20% เป็นเวลา 20 วินาที
               </div>
             </div>
-            <div class="row bg-danger p-4">
+            <div class="row bg-danger p-4 w-100 rounded border-dark border m-2">
               <div class="row">
                 <div class="col">
                   <img
-                  class="rounded-circle"
+                    class="rounded-circle"
                     src="https://github.com/Patiyut1807/CE-KMITL-Web-App-Dev/blob/main/Img/Talent_Niwabi_Fire-Dance.jpg?raw=true"
                   />
                 </div>
-                <div class="col-25 ml-4">A Procession of Bonfires</div>
-                <div class="col-25 ml-4">2</div>
+                <div
+                  class="col-25 ml-4 border-dark border p-2 font-weight-bold"
+                >
+                  A Procession of Bonfires
+                </div>
+                <div
+                  class="col-25 ml-4 border-dark border p-2 font-weight-bold"
+                >
+                  2
+                </div>
               </div>
-              <div class="row">
-                ภายใน 6 วินาที หลังจากที่ความเสียหายไฟของ Yoimiya เกิดคริติคอล Yoimiya จะได้รับโบนัสความเสียหายไฟ 25%
-เอฟเฟกต์ดังกล่าวยังคงเกิดขึ้น แม้ Yoimiya อยู่ในทีมแต่ไม่ได้เข้าร่วมการต่อสู้ก็ตาม
+              <div class="row p-3 mt-2">
+                ภายใน 6 วินาที หลังจากที่ความเสียหายไฟของ Yoimiya เกิดคริติคอล
+                Yoimiya จะได้รับโบนัสความเสียหายไฟ 25%
+                เอฟเฟกต์ดังกล่าวยังคงเกิดขึ้น แม้ Yoimiya
+                อยู่ในทีมแต่ไม่ได้เข้าร่วมการต่อสู้ก็ตาม
               </div>
             </div>
-            <div class="row bg-danger p-4">
+            <div class="row bg-danger p-4 w-100 rounded border-dark border m-2">
               <div class="row">
                 <div class="col">
                   <img
-                  class="rounded-circle"
+                    class="rounded-circle"
                     src="https://github.com/Patiyut1807/CE-KMITL-Web-App-Dev/blob/main/Img/Talent_Ryuukin_Saxifrage.jpg?raw=true"
                   />
                 </div>
-                <div class="col-25 ml-4">Trickster's Flare</div>
-                <div class="col-25 ml-4">3</div>
+                <div
+                  class="col-25 ml-4 border-dark border p-2 font-weight-bold"
+                >
+                  Trickster's Flare
+                </div>
+                <div
+                  class="col-25 ml-4 border-dark border p-2 font-weight-bold"
+                >
+                  3
+                </div>
               </div>
-              <div class="row">
+              <div class="row w-100 p-3 mt-2">
                 เพิ่มเลเวลสกิลของ Niwabi Fire-Dance ขึ้น 3 ระดับ
                 เพิ่มได้สูงสุดถึงระดับ 15
               </div>
             </div>
-            <div class="row bg-danger p-4">
+            <div class="row bg-danger p-4 w-100 rounded border-dark border m-2">
               <div class="row">
                 <div class="col">
                   <img
-                  class="rounded-circle"
+                    class="rounded-circle"
                     src="https://github.com/Patiyut1807/CE-KMITL-Web-App-Dev/blob/main/Img/Talent_Ryuukin_Saxifrage.jpg?raw=true"
                   />
                 </div>
-                <div class="col-25 ml-4">Pyrotechnic Professional</div>
-                <div class="col-25 ml-4">4</div>
+                <div
+                  class="col-25 ml-4 border-dark border p-2 font-weight-bold"
+                >
+                  Pyrotechnic Professional
+                </div>
+                <div
+                  class="col-25 ml-4 border-dark border p-2 font-weight-bold"
+                >
+                  4
+                </div>
               </div>
-              <div class="row">
-                เมื่อ Aurous Blaze ของตัว Yoimiya เองเกิดการระเบิด เวลาคูลดาวน์ของ Niwabi Fire-Dance จะลดลง 1.2 วินาที
+              <div class="row w-100 p-3 mt-2">
+                เมื่อ Aurous Blaze ของตัว Yoimiya เองเกิดการระเบิด
+                เวลาคูลดาวน์ของ Niwabi Fire-Dance จะลดลง 1.2 วินาที
               </div>
             </div>
-            <div class="row bg-danger p-4">
+            <div class="row bg-danger p-4 w-100 rounded border-dark border m-2">
               <div class="row">
                 <div class="col">
                   <img
-                  class="rounded-circle"
+                    class="rounded-circle"
                     src="https://github.com/Patiyut1807/CE-KMITL-Web-App-Dev/blob/main/Img/Talent_Ryuukin_Saxifrage.jpg?raw=true"
                   />
                 </div>
-                <div class="col-25 ml-4">A Summer Festival's Eve</div>
-                <div class="col-25 ml-4">5</div>
+                <div
+                  class="col-25 ml-4 border-dark border p-2 font-weight-bold"
+                >
+                  A Summer Festival's Eve
+                </div>
+                <div
+                  class="col-25 ml-4 border-dark border p-2 font-weight-bold"
+                >
+                  5
+                </div>
               </div>
-              <div class="row">
+              <div class="row w-100 p-3 mt-2">
                 เพิ่มเลเวลสกิลของ Ryuukin Saxifrage ขึ้น 3 ระดับ
-เพิ่มได้สูงสุดถึงระดับ 15
+                เพิ่มได้สูงสุดถึงระดับ 15
               </div>
             </div>
-            <div class="row bg-danger p-4">
+            <div class="row bg-danger p-4 w-100 rounded border-dark border m-2">
               <div class="row">
                 <div class="col">
                   <img
-                  class="rounded-circle"
+                    class="rounded-circle"
                     src="https://github.com/Patiyut1807/CE-KMITL-Web-App-Dev/blob/main/Img/Talent_Ryuukin_Saxifrage.jpg?raw=true"
                   />
                 </div>
-                <div class="col-25 ml-4">Naganohara Meteor Swarm</div>
-                <div class="col-25 ml-4">6</div>
+                <div
+                  class="col-25 ml-4 border-dark border p-2 font-weight-bold"
+                >
+                  Naganohara Meteor Swarm
+                </div>
+                <div
+                  class="col-25 ml-4 border-dark border p-2 font-weight-bold"
+                >
+                  6
+                </div>
               </div>
-              <div class="row">
-                ภายในช่วงเวลาต่อเนื่องของ Niwabi Fire-Dance เมื่อ Yoimiya ใช้การโจมตีปกติ จะมีโอกาส 50% ที่จะยิง Blazing Arrow ที่สร้างความเสียหายเป็น 60% จากของเดิมเพิ่มอีกหนึ่งดอก โดยที่ความเสียหายนี้จะถูกมองว่าเป็นความเสียหายจากการโจมตีปกติ
+              <div class="row p-3 mt-2">
+                ภายในช่วงเวลาต่อเนื่องของ Niwabi Fire-Dance เมื่อ Yoimiya
+                ใช้การโจมตีปกติ จะมีโอกาส 50% ที่จะยิง Blazing Arrow
+                ที่สร้างความเสียหายเป็น 60% จากของเดิมเพิ่มอีกหนึ่งดอก
+                โดยที่ความเสียหายนี้จะถูกมองว่าเป็นความเสียหายจากการโจมตีปกติ
               </div>
             </div>
           </div>
-          <div class="row">การเลื่อนขั้นและค่าสถานะ</div>
-          <div class="row">การยกระดับพรสวรรค์</div>
+          <div class="row">
+            <h3 id="Ascensions-and-Stats" class="row badge-dark ml-2">การเลื่อนขั้นและค่าสถานะ</h3>
+            <img
+              class="m-auto"
+              width="100%"
+              class="row"
+              src="https://github.com/Patiyut1807/CE-KMITL-Web-App-Dev/blob/main/Img/Screenshot_20230208_101643.png?raw=true"
+            />
+          </div>
+          <div class="row">
+            <h3 id="Talent-Upgrade" class="row badge-dark ml-2">การยกระดับพรสวรรค์</h3>
+            <img
+              class="m-auto"
+              width="100%"
+              src="https://github.com/Patiyut1807/CE-KMITL-Web-App-Dev/blob/main/Img/Screenshot_20230208_101606.png?raw=true"
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </div>
