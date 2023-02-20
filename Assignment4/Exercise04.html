@@ -21,6 +21,22 @@
       let headSnapshort = document.createElement("h1");
       headSnapshort.innerText = "Snapshot"
       document.body.appendChild(headSnapshort);
+
+      let ul = document.createElement("ul");
+      document.body.appendChild(ul);
+
+      let a_navigate = ["Fireworks","Crest","Action","Buffalo"]
+      a_navigate.map((e)=>{
+        let li = document.createElement("li");
+        let a = document.createElement("a")
+        a.setAttribute("id",e)
+        a.innerText = e
+        a.style.display = "block"
+        li.appendChild(a)
+        ul.appendChild(li)
+      })
+
+      let img = document.createElement("img")
     </script>
   </body>
 </html>
