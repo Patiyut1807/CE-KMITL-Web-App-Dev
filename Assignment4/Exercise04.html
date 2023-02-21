@@ -4,115 +4,61 @@
   <body>
     <div id="maincontainer"></div>
     <script>
-      const body = {
-        child: [
-          {
-            tag: "h2",
-            text: "Exercise 04: JavaScript&DOM",
-          },
-          {
-            tag: "button",
-            text: "Click me to display Date and Time",
-          },
-          {
-            tag: "a",
-            text: "Personal Info",
-            style: [{ prop: "display", val: "block" }],
-          },
-          {
-            tag: "h1",
-            text: "Snapshot",
-          },
-          {
-            tag: "ul",
-            child: [
-              {
-                tag: "li",
-                child: [
-                  {
-                    tag: "a",
-                    text:"Fireworks"
-                  },
-                ],
-              },
-              {
-                tag: "li",
-                child: [
-                  {
-                    tag: "a",
-                    text:"Crest"
-                  },
-                ],
-              },
-              {
-                tag: "li",
-                child: [
-                  {
-                    tag: "a",
-                    text:"Action"
-                  },
-                ],
-              },
-              {
-                tag: "li",
-                child: [
-                  {
-                    tag: "a",
-                    text:"Buffalo"
-                  },
-                ],
-              },
-            ],
-          },
-          {
-            tag:"img",
-          }
-        ],
-      };
+      var w
+      let container = document.getElementById("maincontainer");
       //element zone
       let head = document.createElement("h2");
       head.innerText = "Exercise 04: JavaScript&DOM";
-      document.body.appendChild(head);
+      container.appendChild(head);
+
+      let div = document.createElement("div")
+      div.style.height = "22px"
+      container.appendChild(div);
+
 
       let button = document.createElement("button");
       button.innerText = "Click me to display Date and Time";
-      // button.style.position = "fixed";
-      // button.style.top = "0px";
-      // button.style.right = "0px";
+      button.setAttribute("id", "button_time");
 
-      button.onclick =() => {
+      button.onclick = () => {
+        if (typeof w == "undefined") {
+            startWorker()
+          }
+          else{
+            stopWorker()
+          }
         
-      }
+      };
 
-      document.body.appendChild(button);
+      div.appendChild(button);
 
       let a = document.createElement("a");
 
       a.innerText = "Personal Info";
-      a.style.color = "pink";
+      a.style.color = "hotpink";
       a.style.textDecoration = "underline";
       a.style.display = "block";
       a.style.marginTop = "25px";
       a.style.width = "fit-content";
 
       a.onmouseleave = () => {
-        a.style.color = "pink";
+        a.style.color = "hotpink";
         a.style.backgroundColor = "white";
       };
       a.onmouseover = () => {
         a.style.backgroundColor = "yellow";
         a.style.color = "blue";
       };
-      a.onclick =()=>{
-        let info = document.getElementById("info")
-        info.style.display = info.style.display=="none" ? "block" : "none"
-      }
-      document.body.appendChild(a);
+      a.onclick = () => {
+        let info = document.getElementById("info");
+        info.style.display = info.style.display == "none" ? "block" : "none";
+      };
+      container.appendChild(a);
 
       let ul = document.createElement("ul");
-      ul.setAttribute("id","info")
-      ul.style.display ="none";
-      document.body.appendChild(ul);
+      ul.setAttribute("id", "info");
+      ul.style.display = "none";
+      container.appendChild(ul);
 
       let info = [
         {
@@ -122,18 +68,17 @@
           text: "Subject: WEB APPLICATION DEVELOPMENT",
         },
         {
-          text: "Semester",
+          text: "Semester: 2",
         },
-        
       ];
       info.map((e) => {
         let li = document.createElement("li");
         let p = document.createElement("p");
         p.innerText = e.text;
 
+        p.style.margin = "0px";
         p.style.display = "block";
         p.style.width = "fit-content";
-
 
         li.appendChild(p);
         ul.appendChild(li);
@@ -141,42 +86,42 @@
 
       let headSnapshort = document.createElement("h1");
       headSnapshort.innerText = "Snapshot";
-      document.body.appendChild(headSnapshort);
+      container.appendChild(headSnapshort);
 
       ul = document.createElement("ul");
-      document.body.appendChild(ul);
+      container.appendChild(ul);
 
       let a_navigate = [
         {
-          id: "a1",
           text: "Fireworks",
-          src:"https://rare-gallery.com/mocahbig/392052-yoimiya-genshin-impact-game-4k-pc-wallpaper.jpg"
+          src: "https://rare-gallery.com/mocahbig/392052-yoimiya-genshin-impact-game-4k-pc-wallpaper.jpg",
         },
         {
-          id: "a2",
           text: "Crest",
-          src:"https://github.com/Patiyut1807/CE-KMITL-Web-App-Dev/blob/main/Img/Assign4/images.jpg?raw=true"
+          src: "https://github.com/Patiyut1807/CE-KMITL-Web-App-Dev/blob/main/Img/Assign4/images.jpg?raw=true",
         },
         {
-          id: "a3",
           text: "Action",
-          src:"https://github.com/Patiyut1807/CE-KMITL-Web-App-Dev/blob/main/Img/Assign4/resume-action-words-verbs.png?raw=true"
+          src: "https://github.com/Patiyut1807/CE-KMITL-Web-App-Dev/blob/main/Img/Assign4/resume-action-words-verbs.png?raw=true",
         },
         {
-          id: "a4",
           text: "Buffalo",
-          src:"https://github.com/Patiyut1807/CE-KMITL-Web-App-Dev/blob/main/Img/Assign4/African_buffalo_(Syncerus_caffer_caffer)_male_with_cattle_egret.jpg?raw=true"
+          src: "https://github.com/Patiyut1807/CE-KMITL-Web-App-Dev/blob/main/Img/Assign4/African_buffalo_(Syncerus_caffer_caffer)_male_with_cattle_egret.jpg?raw=true",
         },
       ];
       a_navigate.map((e) => {
         let li = document.createElement("li");
         let a = document.createElement("a");
-        a.setAttribute("id", e.id);
         a.innerText = e.text;
 
+        a.style.textDecoration = "underline";
+        a.style.color = "blue";
         a.style.display = "block";
         a.style.width = "fit-content";
 
+        a.onclick = () => {
+          document.getElementById("banner").setAttribute("src", e.src);
+        };
 
         li.appendChild(a);
         ul.appendChild(li);
@@ -184,10 +129,39 @@
 
       let img = document.createElement("img");
       img.setAttribute("id", "banner");
-      img.style.width = "500px"
-      img.setAttribute("src", "")
-      document.body.appendChild(img);
+      img.style.width = "500px";
+      img.setAttribute(
+        "src",
+        "https://github.com/Patiyut1807/CE-KMITL-Web-App-Dev/blob/main/Img/Assign4/297283850_5367962686597930_4237137743468903702_n.png?raw=true"
+      );
+      container.appendChild(img);
 
+      let startWorker =()=> {
+        if (typeof Worker !== "undefined") {
+          if (typeof w == "undefined") {
+            w = new Worker("web-worker.js");
+            button.style.border = "solid 2px black"
+            button.style.position = "fixed";
+            button.style.top = "0px"
+            button.style.right  = "0px"
+          }
+          w.onmessage =  (event)=>{
+            button.innerText = event.data.date
+            button.style.backgroundColor = event.data.bg
+            button.style.color = event.data.color;
+          };
+        } else {
+          document.getElementById("button_time").innerHTML =
+            "Sorry! No Web Worker support.";
+        }
+      }
+
+      let stopWorker=()=> {
+        button.style.position = "static";
+        console.log(button.style.position);
+        w.terminate();
+        w = undefined;
+      }
     </script>
   </body>
 </html>
