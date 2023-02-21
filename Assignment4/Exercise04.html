@@ -4,17 +4,16 @@
   <body>
     <div id="maincontainer"></div>
     <script>
-      var w
+      var w;
       let container = document.getElementById("maincontainer");
       //element zone
       let head = document.createElement("h2");
       head.innerText = "Exercise 04: JavaScript&DOM";
       container.appendChild(head);
 
-      let div = document.createElement("div")
-      div.style.height = "22px"
+      let div = document.createElement("div");
+      div.style.height = "22px";
       container.appendChild(div);
-
 
       let button = document.createElement("button");
       button.innerText = "Click me to display Date and Time";
@@ -22,12 +21,10 @@
 
       button.onclick = () => {
         if (typeof w == "undefined") {
-            startWorker()
-          }
-          else{
-            stopWorker()
-          }
-        
+          startWorker();
+        } else {
+          stopWorker();
+        }
       };
 
       div.appendChild(button);
@@ -40,6 +37,7 @@
       a.style.display = "block";
       a.style.marginTop = "25px";
       a.style.width = "fit-content";
+      a.style.cursor = "pointer";
 
       a.onmouseleave = () => {
         a.style.color = "hotpink";
@@ -118,6 +116,7 @@
         a.style.color = "blue";
         a.style.display = "block";
         a.style.width = "fit-content";
+        a.style.cursor = "pointer";
 
         a.onclick = () => {
           document.getElementById("banner").setAttribute("src", e.src);
@@ -136,32 +135,32 @@
       );
       container.appendChild(img);
 
-      let startWorker =()=> {
+      let startWorker = () => {
         if (typeof Worker !== "undefined") {
           if (typeof w == "undefined") {
             w = new Worker("web-worker.js");
-            button.style.border = "solid 2px black"
+            button.style.border = "solid 2px black";
             button.style.position = "fixed";
-            button.style.top = "0px"
-            button.style.right  = "0px"
+            button.style.top = "0px";
+            button.style.right = "0px";
           }
-          w.onmessage =  (event)=>{
-            button.innerText = event.data.date
-            button.style.backgroundColor = event.data.bg
+          w.onmessage = (event) => {
+            button.innerText = event.data.date;
+            button.style.backgroundColor = event.data.bg;
             button.style.color = event.data.color;
           };
         } else {
           document.getElementById("button_time").innerHTML =
             "Sorry! No Web Worker support.";
         }
-      }
+      };
 
-      let stopWorker=()=> {
+      let stopWorker = () => {
         button.style.position = "static";
         console.log(button.style.position);
         w.terminate();
         w = undefined;
-      }
+      };
     </script>
   </body>
 </html>
