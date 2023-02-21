@@ -4,6 +4,71 @@
   <body>
     <div id="maincontainer"></div>
     <script>
+      const body = {
+        child: [
+          {
+            tag: "h2",
+            text: "Exercise 04: JavaScript&DOM",
+          },
+          {
+            tag: "button",
+            text: "Click me to display Date and Time",
+          },
+          {
+            tag: "a",
+            text: "Personal Info",
+            style: [{ prop: "display", val: "block" }],
+          },
+          {
+            tag: "h1",
+            text: "Snapshot",
+          },
+          {
+            tag: "ul",
+            child: [
+              {
+                tag: "li",
+                child: [
+                  {
+                    tag: "a",
+                    text:"Fireworks"
+                  },
+                ],
+              },
+              {
+                tag: "li",
+                child: [
+                  {
+                    tag: "a",
+                    text:"Crest"
+                  },
+                ],
+              },
+              {
+                tag: "li",
+                child: [
+                  {
+                    tag: "a",
+                    text:"Action"
+                  },
+                ],
+              },
+              {
+                tag: "li",
+                child: [
+                  {
+                    tag: "a",
+                    text:"Buffalo"
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            tag:"img",
+          }
+        ],
+      };
       //element zone
       let head = document.createElement("h2");
       head.innerText = "Exercise 04: JavaScript&DOM";
