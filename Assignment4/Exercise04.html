@@ -10,33 +10,117 @@
       document.body.appendChild(head);
 
       let button = document.createElement("button");
-      button.innerText = "Click me to display Date and Time"
+      button.innerText = "Click me to display Date and Time";
+      // button.style.position = "fixed";
+      // button.style.top = "0px";
+      // button.style.right = "0px";
+
+      button.onclick =() => {
+        
+      }
+
       document.body.appendChild(button);
 
       let a = document.createElement("a");
-      a.style.display = "block"
-      a.innerText = "Personal Info"
+
+      a.innerText = "Personal Info";
+      a.style.color = "pink";
+      a.style.textDecoration = "underline";
+      a.style.display = "block";
+      a.style.marginTop = "25px";
+      a.style.width = "fit-content";
+
+      a.onmouseleave = () => {
+        a.style.color = "pink";
+        a.style.backgroundColor = "white";
+      };
+      a.onmouseover = () => {
+        a.style.backgroundColor = "yellow";
+        a.style.color = "blue";
+      };
+      a.onclick =()=>{
+        let info = document.getElementById("info")
+        info.style.display = info.style.display=="none" ? "block" : "none"
+      }
       document.body.appendChild(a);
 
-      let headSnapshort = document.createElement("h1");
-      headSnapshort.innerText = "Snapshot"
-      document.body.appendChild(headSnapshort);
-
       let ul = document.createElement("ul");
+      ul.setAttribute("id","info")
+      ul.style.display ="none";
       document.body.appendChild(ul);
 
-      let a_navigate = ["Fireworks","Crest","Action","Buffalo"]
-      a_navigate.map((e)=>{
+      let info = [
+        {
+          text: "Patiyut Wangtong, ID: 64010479",
+        },
+        {
+          text: "Subject: WEB APPLICATION DEVELOPMENT",
+        },
+        {
+          text: "Semester",
+        },
+        
+      ];
+      info.map((e) => {
         let li = document.createElement("li");
-        let a = document.createElement("a")
-        a.setAttribute("id",e)
-        a.innerText = e
-        a.style.display = "block"
-        li.appendChild(a)
-        ul.appendChild(li)
-      })
+        let p = document.createElement("p");
+        p.innerText = e.text;
 
-      let img = document.createElement("img")
+        p.style.display = "block";
+        p.style.width = "fit-content";
+
+
+        li.appendChild(p);
+        ul.appendChild(li);
+      });
+
+      let headSnapshort = document.createElement("h1");
+      headSnapshort.innerText = "Snapshot";
+      document.body.appendChild(headSnapshort);
+
+      ul = document.createElement("ul");
+      document.body.appendChild(ul);
+
+      let a_navigate = [
+        {
+          id: "a1",
+          text: "Fireworks",
+          src:"https://rare-gallery.com/mocahbig/392052-yoimiya-genshin-impact-game-4k-pc-wallpaper.jpg"
+        },
+        {
+          id: "a2",
+          text: "Crest",
+          src:""
+        },
+        {
+          id: "a3",
+          text: "Action",
+        },
+        {
+          id: "a4",
+          text: "Buffalo",
+        },
+      ];
+      a_navigate.map((e) => {
+        let li = document.createElement("li");
+        let a = document.createElement("a");
+        a.setAttribute("id", e.id);
+        a.innerText = e.text;
+
+        a.style.display = "block";
+        a.style.width = "fit-content";
+
+
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+
+      let img = document.createElement("img");
+      img.setAttribute("id", "banner");
+      img.style.width = "500px"
+      img.setAttribute("src", "")
+      document.body.appendChild(img);
+
     </script>
   </body>
 </html>
