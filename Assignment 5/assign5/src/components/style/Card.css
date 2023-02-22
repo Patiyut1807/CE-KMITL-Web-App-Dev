@@ -1,0 +1,29 @@
+#card{
+    min-width: 525px;
+    max-width: 60%;
+    /* min-height: 30%; */
+    
+    background-color: #FCECD6;
+    border-radius: 10px;
+    border: solid 2px black;
+    display: flex;
+    flex-direction: column;
+}
+#info{
+    display: flex;
+}
+#text-info{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    padding-left:15px;
+}
+#text-info *{
+    margin: 12px;
+}
+img{
+    width: 250px;
+    height: 200px;
+    margin: 25px 25px ;
+}
+

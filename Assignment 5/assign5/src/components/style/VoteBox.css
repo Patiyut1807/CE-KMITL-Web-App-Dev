@@ -1,0 +1,27 @@
+.container{
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    column-gap: 12px;
+    margin: 10px;
+}
+#info{
+    display: flex;
+}
+#score{
+    border: solid 2px black;
+    padding: 5px 5px;
+    background-color: rgb(114, 241, 55);
+    border-radius: 7px;
+    width: 40px;
+    text-align: center;
+    font-weight: 800;
+    font-family: sans-serif;
+    color:blueviolet
+}
+.btn{
+    border: solid 1px ;
+    height: 28px;
+    border-radius: 3px;
+}
